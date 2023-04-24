@@ -1,0 +1,121 @@
+syntax = "proto3";
+
+enum RecordingMode {
+    MODE_CONTINOUS = 0;
+    MODE_INTERVAL = 1;
+}
+
+enum RecordingState {
+    STATE_EMPTY = 0;
+    STATE_IDLE = 1;
+    STATE_RECORDING = 2;
+    STATE_WAITING = 3;
+    STATE_ERROR = 4;
+}
+
+enum RecordingStatus {
+    STATUS_RECORDING = 0;
+    STATUS_WAITING = 1;
+    STATUS_READY = 2;
+    STATUS_ERROR = 3;
+}
+
+enum DeviceType {
+    TYPE_RPI = 0;
+    TYPE_SERVER = 1;
+    TYPE_WEBAPP = 2;
+}
+
+enum Commands {
+    CMD_EMPTY = 0;
+    CMD_REQ_DEVICE_INFO = 1;
+    CMD_RES_DEVICE_INFO = 2;
+    CMD_REQ_SET_RECORDING_STATE = 3;
+    CMD_REQ_GET_RECORDING_STATE = 4;
+    CMD_RES_GET_RECORDING_STATE = 5; 
+}
+
+message HomecageCommand{
+    string client_name = 1; 
+    Commands command = 2;
+
+    oneof msg {
+        ResDeviceInfo res_device_info = 3;
+        ResGetRecordingState res_get_recording_state = 4;
+        ReqSetRecordingState req_set_recording_state = 5;
+    }
+}
+
+message ReqSetRecordingState {
+    RecordingState state = 1;
+}
+
+message ResGetRecordingState {
+    RecordingState state = 1;
+}
+
+message ResDeviceInfo {
+    repeated DeviceInfo device_infos = 1;
+}
+
+message CameraDevice{
+    int32 id = 1;
+    int32 width = 2;
+    int32 height = 3;
+    int32 channels = 4;
+    int32 fps = 5;
+    string enconding = 6;
+    string type = 7;
+    RecordingState state = 8;
+    RecordingMode mode = 9;
+    RecordingStatus status = 10;
+    int32 shedule = 11;
+}
+
+message Storage{
+    int64 total = 1;
+    int64 free = 2;
+}
+
+message DeviceInfo {
+    string device_name = 1;
+    DeviceType device_type = 2;
+    repeated CameraDevice cameras = 3;
+    Storage storage = 4;
+}
+
+// message RespConnectedDevices {
+//     repeated CameraDevice devices = 1;
+// }
+
+// message RespDeviceInfos  {
+//     repeated 
+// }
+
+
+// message RespState {
+//     RecordingState rec_state = 9;
+// }
+
+// message RespStartRecording {
+//     bool successStart = 10;
+// }
+
+// message RespStopRecording {
+//     bool successStop = 11;
+// }
+
+
+
+// message RecordingSettings{
+//     string export_path = 1;
+//     int32 max_buffer_size = 2;
+//     float timeout_min = 3;
+//     float recording_duration_sec = 4;
+// }
+
+
+
+
+
+
