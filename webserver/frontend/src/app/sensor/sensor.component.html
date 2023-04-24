@@ -1,0 +1,14 @@
+<div class="hc-sensor">
+    <div class="sensor-img">
+        <img src="../../assets/picam_ir.PNG" *ngIf="cam.type == 'Picam'">
+        <img src="../../assets/lepton.png" *ngIf="cam.type == 'Lepton'">
+        <img src="../../assets/boson.PNG" *ngIf="cam.type == 'Boson'">
+
+    </div>
+    <div class="status">
+        <span>mode:</span><div class="chip">{{recordingMode}}</div>
+        <span>state:</span><div class="chip">{{recordingState}}</div>
+        <span>status:</span><div class="chip">{{recordingStatus}}</div>
+
+    </div>
+</div>

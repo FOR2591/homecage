@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="item" *ngFor="let info of deviceInfo;">
+        <div class="caption">{{info.deviceName}}</div>
+        <div></div>
+        <div class="caption">Storage</div>
+        <div></div>
+        <div class="caption">Sensors</div>
+
+        <div class="rpi"></div>
+        <div class="divider"></div>
+        <div style="margin-left: auto; margin-right: auto;">
+            <hc-storage [free]="info.storage!.free" [used]="info.storage!.total - info.storage!.free"></hc-storage>
+        </div>
+        <div class="divider"></div>
+        <div class="sensors">
+            <hc-sensor [cam]="cam" *ngFor="let cam of info.cameras;"></hc-sensor>
+        </div>
+    </div>
+</div>

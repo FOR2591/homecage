@@ -1,0 +1,6 @@
+<button mat-raised-button>
+    <div style="padding-left: 24px; padding-right: 24px; padding-top: 4px; padding-bottom: 4px;" (click)="toggleRecordingState()">
+        <p *ngIf="state == 1">Start recording</p>
+        <p *ngIf="state == 2">Stop recording</p>
+    </div>
+</button>

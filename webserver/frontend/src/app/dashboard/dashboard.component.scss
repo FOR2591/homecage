@@ -1,0 +1,100 @@
+:host {
+    position: absolute;
+    top: 128px; left: 48px; bottom: 128px; right: 48px;
+    display: flex;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+div.card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    border-radius: 32px;
+    box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%), 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%);
+    flex-grow: 1;
+    margin: 48px 0 48px 0;
+}
+
+div.item {
+    display: grid;
+    grid-template-columns: 160px 1px 1fr 1px 1.5fr;
+    margin-top: 16px;
+
+    div.caption {
+        color: rgb(92, 92, 92);
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    div.divider {
+        background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0, 0.5) 50%, rgba(255,255,255,1) 100%);
+    }
+
+    div.rpi {
+        margin-top: 12px;
+        margin-left: 0px;
+        background-image: url('../../assets/rpi_90deg.png');
+        background-size: auto 140px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 140px
+
+    }
+
+    div.sensors {
+        margin-left: 12px;
+    }
+}
+
+// div.item {
+//     display: flex;
+//     height: 148px;
+//     width: 100%;
+//     padding: 16px 16px 16px 16px;
+
+
+
+//     div.rpi.offline {
+//         background-image: url('../../assets/rpi_offline.png');
+//     }
+
+//     div.index {
+//         width: 64px
+//     }
+
+//     div.sensor {
+//         display: flex;
+//         flex-direction: column;
+//         height: 128px;
+//         margin-left: 32px; margin-right: 32px;
+//         padding-top: 24px;
+
+//         img {
+//             height: 64px;
+//             margin: 0 auto 16px auto;
+//         }
+
+//         div.status {
+//             font-size: 14px;
+//             font-weight: 500;
+//             line-height: 31px;
+//             padding-left: 16px; padding-right: 16px;
+//             background-color: #e0e0e0;
+//             height: 32px;
+//             border-radius: 16px;
+
+//             text-align: center;
+//         }
+
+//         div.status.error {
+//             background-color: red;
+//         }
+//     }
+// }

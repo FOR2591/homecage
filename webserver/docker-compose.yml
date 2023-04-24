@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:                       
+        statistics:
+                image: hub/homecage:1.0.0
+                build: 
+                    context: "."
+                restart: always
+                container_name: "homecage"
+                ports:
+                    - "3000:3100"
+                    - "4200:4200"
+

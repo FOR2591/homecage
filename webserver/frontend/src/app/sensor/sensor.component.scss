@@ -1,0 +1,39 @@
+div.hc-sensor {
+    display: grid;
+    grid-template-columns: 78px 1fr;
+    grid-template-rows: 72px;
+    margin: 5px 4px 5px 0;
+
+    overflow: hidden;
+
+    div.sensor-img {
+        img { height: 70px}
+    }
+
+    div.status {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        grid-template-rows: 24px 24px 24px;
+
+        span {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 24px;
+        }
+
+        div.chip {
+            margin-left: 16px;
+            margin-right: 16px;
+            margin-top: 2px;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 21px;
+            padding-left: 16px; padding-right: 16px;
+            background-color: #e0e0e0;
+            height: 20px;
+            border-radius: 16px;
+
+            text-align: center;
+        }
+    }
+}

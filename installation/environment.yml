@@ -1,0 +1,12 @@
+name: py38
+
+dependencies:
+  - python=3.8
+  - opencv
+  - scipy
+  - colorlog
+  - h5py
+  - tqdm
+  - tornado
+  - pip:
+    - betterproto==2.0.0b4
