@@ -4,8 +4,8 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 ## Setup
 
-# Raspberry Pi
+### Raspberry Pi
 
-# Monitoring
+### Monitoring
 
-# Webserver
+### Webserver
