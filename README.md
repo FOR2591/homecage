@@ -28,3 +28,7 @@ conda activate py38
 python ./monitoring/main.py
 ```
 ### Webserver
+A web server is provided to manage one or multiple home cage systems and start and stop the monitoring. It serves as both the front-end and back-end for controlling the system. This web server is based on container virtualization and requires the installation of Docker and Docker Compose. The webserver can be started via:
+```
+docker-compose -f ./webserver/docker-compose.yml up --build
+```
