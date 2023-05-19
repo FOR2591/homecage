@@ -15,8 +15,16 @@ This repository contains the software, system configurations, and 3D models pres
 ### Raspberry Pi
 The resolution limits for photo capture need to be adjusted by using a custom bcm2835-v4l2.conf to enable the Raspberry Pi to capture high-resolution frames at 40fps using the PiCamera v2.
 ```
-cp .installation/etc/modprobe.d/bcm2835-v4l2.conf /etc/modprobe.d/
+cp ./installation/etc/modprobe.d/bcm2835-v4l2.conf /etc/modprobe.d/
 ```
 ### Monitoring
-
+Using the monitoring software requires the presence of a prepared Python environment. For example, the necessary packages can be installed through Anaconda using the environment.yml file.
+```
+conda env create -f ./installation/environment.yml
+```
+Afterwards, the program can be launched by:
+```
+conda activate py38
+python ./monitoring/main.py
+```
 ### Webserver
